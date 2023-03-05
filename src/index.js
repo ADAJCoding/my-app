@@ -44,10 +44,10 @@ const mapDispatchToProps = {
 
 const store = configureStore(reducer);
 
-const Counter = connect(mapStateToProps, mapDispatchToProps)(Counter);
+const ConnectedCounter = connect(mapStateToProps, mapDispatchToProps)(Counter);
 
 const el = <Provider store={store}>
-          <Counter/>
+          <ConnectedCounter/>
         </Provider>; 
 
 ReactDOM.render(
