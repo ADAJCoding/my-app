@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { configureStore } from 'redux';
+import { createStore } from 'redux';
 import { connect } from 'react-redux';
-import 'src/index.css';
+import './index.css';
 
 // Action creator
 function incrementCounter(num) {
@@ -42,7 +42,7 @@ const mapDispatchToProps = {
   incrementCounter
 }
 
-const store = configureStore(reducer);
+const store = createStore(reducer);
 
 const ConnectedCounter = connect(mapStateToProps, mapDispatchToProps)(Counter);
 
